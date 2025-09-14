@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio - Industrial Automation Engineer</title>
+  <title>Mithileshwaran T P - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,14 +14,23 @@
       line-height: 1.6;
     }
     header {
-      background: #1e293b;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
       color: white;
-      padding: 2rem;
+      padding: 2.5rem 1rem;
       text-align: center;
+      position: relative;
+    }
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 1rem;
+      object-fit: cover;
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
     header p {
       margin: 0.5rem 0 0;
@@ -32,37 +41,62 @@
       background: #0f172a;
       display: flex;
       justify-content: center;
-      padding: 0.5rem;
+      padding: 0.75rem;
+      flex-wrap: wrap;
     }
     nav a {
       color: #f1f5f9;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s;
     }
     nav a:hover {
       color: #38bdf8;
     }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
     section h2 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       margin-bottom: 1rem;
       color: #0f172a;
+      border-left: 6px solid #38bdf8;
+      padding-left: 0.5rem;
     }
     .card {
       background: white;
       border-radius: 0.75rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     .card h3 {
       margin-top: 0;
       color: #1e293b;
+    }
+    .timeline {
+      border-left: 3px solid #38bdf8;
+      padding-left: 1rem;
+    }
+    .timeline-item {
+      margin-bottom: 1.5rem;
+    }
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #0f172a;
+    }
+    .timeline-item span {
+      font-size: 0.95rem;
+      color: #6b7280;
     }
     footer {
       background: #1e293b;
@@ -80,12 +114,15 @@
 </head>
 <body>
   <header>
+    <img src="profile.jpg" alt="Mithileshwaran T P">
     <h1>Mithileshwaran T P</h1>
     <p>Automation Engineer (Siemens PCS7) | Instrumentation Engineer (EMSR) | PLC | HMI | IIoT | Industry 4.0</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -98,10 +135,42 @@
         My name is Mithileshwaran, and I am an Automation Engineer passionate about Digitization & Industry 4.0.​
         Holding a master’s degree from Germany in Electrical Engineering & IT (majoring in Automation), I bring nearly 3 years of experience as an Instrumentation Design Engineer and 1 year experience as Automation Engineer (PCS7) working for multinational companies.
         ​My expertise spans mainly in process industries, including oil & gas, pharmaceuticals, food & beverage production, and chemicals.  
-        
-        I am so enthusiastic about working in collaborative team environments, continuously honing my managerial and leadership skills, and driving collective success.​​ 
+        <br><br>
+        I am enthusiastic about working in collaborative team environments, continuously honing my managerial and leadership skills, and driving collective success.​​ 
         I look to collaborate with like minded professionals to learn and contribute in my field of interest.
       </p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="card timeline">
+      <div class="timeline-item">
+        <h3>Automation Engineer (PCS7) – [Company Name]</h3>
+        <span>2024 – Present | Germany</span>
+        <p>Worked on Siemens PCS7 projects for process industries. Configured automation systems, integrated Profinet devices, and developed custom HMI/SCADA solutions.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Instrumentation Design Engineer – [Company Name]</h3>
+        <span>2020 – 2023 | India</span>
+        <p>Designed and delivered EMSR instrumentation solutions for oil & gas and pharma projects. Handled documentation, loop drawings, and compliance with IEC standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card timeline">
+      <div class="timeline-item">
+        <h3>M.Sc. in Electrical Engineering & IT (Automation)</h3>
+        <span>2019 – 2021 | Germany</span>
+        <p>Specialized in automation, IIoT, and Industry 4.0 concepts. Conducted research on industrial data pipelines and predictive maintenance.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>B.E. in Instrumentation & Control Engineering</h3>
+        <span>2015 – 2019 | India</span>
+        <p>Focused on industrial instrumentation, PLC programming, and process control fundamentals.</p>
+      </div>
     </div>
   </section>
 
@@ -132,7 +201,7 @@
         <li><strong>Other Tools:</strong> Node RED | Grafana | Influx DB | VMWare ESXi | MS Excel & Visio </li>
         <li><strong>Programming:</strong> C | C++ | JavaScript | VB Script | Eclipse IDE | Git</li>
         <li><strong>Engineering Software:</strong> Smart Plant Instrumentation (SPI) | MATLAB & Simulink | LabVIEW</li>
-        <li><strong>Languages:</strong> DEUTSCH (B2,1) | ENGLISH (C1)</li>
+        <li><strong>Languages:</strong> DEUTSCH (B2.1) | ENGLISH (C1)</li>
       </ul>
     </div>
   </section>
@@ -143,7 +212,7 @@
       <p>If you'd like to get in touch, feel free to reach out via:</p>
       <ul>
         <li>Email: <a href="mailto:tpmithileshwaran@gmail.com">tpmithileshwaran@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/tpmithileshwaran/" target="_blank">linkedin.com/in/tpmithileshwaran/</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/tpmithileshwaran/" target="_blank">linkedin.com/in/tpmithileshwaran</a></li>
         <li>GitHub: <a href="https://github.com/MithileshwaranTP" target="_blank">github.com/MithileshwaranTP</a></li>
       </ul>
     </div>
