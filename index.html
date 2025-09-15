@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mithileshwaran T P - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
+  <style>a
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -13,13 +13,15 @@
       color: #111827;
       line-height: 1.6;
     }
-    header {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      color: white;
-      padding: 2.5rem 1rem;
-      text-align: center;
-      position: relative;
-    }
+   header {
+  background: url("cover-pic.jpg") center/cover no-repeat, 
+              linear-gradient(135deg, rgba(30,41,59,0.8), rgba(15,23,42,0.8));
+  color: white;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
     header img {
     width: 200px;       /* wider */
     height: 200px;      /* taller */
@@ -296,5 +298,20 @@
   <footer>
     <p>© Mithileshwaran T P.</p>
   </footer>
+<script>
+  // Smooth scroll and center section in viewport
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const target = document.getElementById(targetId);
+
+      window.scrollTo({
+        top: target.offsetTop - (window.innerHeight/2 - target.offsetHeight/2),
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
 </body>
 </html>
