@@ -159,37 +159,6 @@
   <h2>Blogs</h2>
   <div id="blogs-container" class="blogs-grid"></div>
 </section>
-<script>
-  async function loadBlogs() {
-    const rssUrl = "https://medium.com/feed/@yourusername"; // replace with your handle
-    const apiUrl = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(rssUrl);
-
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-
-      let blogsHTML = "";
-      data.items.slice(0, 6).forEach(item => {  // show latest 6 blogs
-        blogsHTML += `
-          <div class="blog-card">
-            <a href="${item.link}" target="_blank">
-              <img src="${item.thumbnail}" alt="Blog Thumbnail">
-              <h3>${item.title}</h3>
-              <p>${item.description.substring(0, 100)}...</p>
-            </a>
-          </div>
-        `;
-      });
-
-      document.getElementById("blogs-container").innerHTML = blogsHTML;
-
-    } catch (err) {
-      console.error("Error fetching Medium blogs:", err);
-    }
-  }
-
-  loadBlogs();
-</script>
 <body>
   <header>
     <img src="Mithileshwaran_TP.png" alt="Mithileshwaran T P">
