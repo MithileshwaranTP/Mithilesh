@@ -11,7 +11,9 @@
       margin: 0;
       background-color: #f9fafb;
       color: #111827;
-      line-height: 1.6;
+      font-size: 18px;        /* bigger base text */
+      line-height: 1.75;      /* more breathing room */
+      letter-spacing: 0.2px;  /* cleaner look */
     }
    header {
   background: url("cover-pic.jpg") center/cover no-repeat, 
@@ -32,13 +34,15 @@
     }
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+  font-size: 2.8rem;      /* bigger name */
+  font-weight: 800;       /* bold for impact */
+  letter-spacing: -0.5px;
     }
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-      color: #cbd5e1;
-    }
+  margin: 0.5rem 0 0;
+  font-size: 1.3rem;      /* subtitle larger */
+  color: #e2e8f0;
+}
     nav {
       background: #0f172a;
       display: flex;
@@ -62,12 +66,14 @@
       padding: 0 1rem;
     }
     section h2 {
-      font-size: 1.9rem;
-      margin-bottom: 1rem;
-      color: #0f172a;
-      border-left: 6px solid #38bdf8;
-      padding-left: 0.5rem;
-    }
+  font-size: 2.2rem;      /* bigger section titles */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  border-left: 6px solid #38bdf8;
+  padding-left: 0.75rem;
+  letter-spacing: -0.3px;
+}
     .card {
       background: white;
       border-radius: 0.75rem;
@@ -117,7 +123,14 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
-
+/* Card Content */
+.card p, 
+.timeline-item p,
+.blog-card p {
+  font-size: 1.05rem;     /* slightly bigger than default */
+  line-height: 1.8;
+  color: #374151;
+}
 .blog-card {
   background: white;
   border-radius: 0.75rem;
@@ -136,7 +149,11 @@
   height: 180px;
   object-fit: cover;
 }
-
+/* Blog titles */
+.blog-card h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
 .blog-card h3 {
   margin: 0.75rem 1rem 0.5rem;
   color: #1e293b;
