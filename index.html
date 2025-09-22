@@ -7,66 +7,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>a
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: #f9fafb;
-      color: #111827;
-      font-size: 18px;        /* bigger base text */
-      line-height: 1.75;      /* more breathing room */
-      letter-spacing: 0.2px;  /* cleaner look */
-    }
-   header {
-  background: url("cover-pic.jpg") center/cover no-repeat, 
-              linear-gradient(135deg, rgba(30,41,59,0.8), rgba(15,23,42,0.8));
-  color: white;
-  padding: 2.5rem 1rem;
-  text-align: center;
-  position: relative;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #f9fafb;
+  color: #111827;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
 }
 
-    header img {
-    width: 200px;       /* wider */
-    height: 200px;      /* taller */
-    border-radius: 50% / 35%; /* horizontal/vertical radius → oval shape */
-    border: 4px solid #38bdf8;
-    margin-bottom: 1rem;
-    object-fit: cover;
-    }
-    header h1 {
-      margin: 0;
-  font-size: 2.8rem;      /* bigger name */
-  font-weight: 800;       /* bold for impact */
-  letter-spacing: -0.5px;
-    }
-    header p {
-  margin: 0.5rem 0 0;
-  font-size: 1.3rem;      /* subtitle larger */
+/* HEADER */
+header {
+  background: url("cover-pic.jpg") center/cover no-repeat,
+              linear-gradient(135deg, rgba(30,41,59,0.8), rgba(15,23,42,0.8));
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50% / 35%;
+  border: 4px solid #38bdf8;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+header h1 {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+header p {
+  margin: 0;
+  font-size: 1.2rem;
   color: #e2e8f0;
 }
-    nav {
-      background: #0f172a;
-      display: flex;
-      justify-content: center;
-      padding: 0.75rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: #f1f5f9;
-      margin: 0.5rem 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #38bdf8;
-    }
-    section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section h2 {
-  font-size: 2.2rem;      /* bigger section titles */
+
+/* NAV */
+nav {
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+}
+nav a {
+  color: #f1f5f9;
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+section h2 {
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #0f172a;
@@ -74,107 +78,84 @@
   padding-left: 0.75rem;
   letter-spacing: -0.3px;
 }
-    .card {
-      background: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #1e293b;
-    }
-    .timeline {
-      border-left: 3px solid #38bdf8;
-      padding-left: 1rem;
-    }
-    .timeline-item {
-      margin-bottom: 1.5rem;
-    }
-    .timeline-item h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #0f172a;
-    }
-    .timeline-item span {
-      font-size: 0.95rem;
-      color: #6b7280;
-    }
-    footer {
-      background: #1e293b;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
-    }
-    footer a {
-      color: #38bdf8;
-      text-decoration: none;
-      font-weight: 600;
-    }
+
+/* CARDS */
+.card, .blog-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover, .blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.card h3, .blog-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+.card p, .timeline-item p, .blog-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 3px solid #38bdf8;
+  padding-left: 1rem;
+}
+.timeline-item {
+  margin-bottom: 1.5rem;
+}
+.timeline-item h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.25rem;
+}
+.timeline-item span {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* BLOGS */
 .blogs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
-/* Card Content */
-.card p, 
-.timeline-item p,
-.blog-card p {
-  font-size: 1.05rem;     /* slightly bigger than default */
-  line-height: 1.8;
-  color: #374151;
-}
-.blog-card {
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
 .blog-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-/* Blog titles */
-.blog-card h3 {
-  font-size: 1.35rem;
+
+/* SKILLS */
+.skills-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+footer {
+  background: #1e293b;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
   font-weight: 600;
 }
-.blog-card h3 {
-  margin: 0.75rem 1rem 0.5rem;
-  color: #1e293b;
-  font-size: 1.2rem;
-}
 
-.blog-card p {
-  margin: 0 1rem 1rem;
-  font-size: 0.95rem;
-  color: #4b5563;
-}
-
-.blog-card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-    .skills-list li {
-  margin-bottom: 1.05rem; /* adds blank line between groups */
-  line-height: 1.2;
-}
   </style>
 </head>
 <body>
